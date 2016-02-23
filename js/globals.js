@@ -113,19 +113,31 @@ function spawnNotification(theBody,theTitle, theIcon) {
   var n = new Notification(theTitle,options);
 }
 
-//navigator.serviceWorker.register('sw.js');
+navigator.serviceWorker.register('service-worker.js');
 
-function showNotification() {
+function showNotification(title, body) {
   Notification.requestPermission(function(result) {
     if (result === 'granted') {
+      console.log('notification');
+      console.log(navigator.serviceWorker.ready);
       navigator.serviceWorker.ready.then(function(registration) {
-        registration.showNotification('Vibration Sample', {
-          body: 'Buzz! Buzz!',
+        console.log('notification2');
+        registration.showNotification(title, {
+          body: body,
           icon: '../images/touch/chrome-touch-icon-192x192.png',
           vibrate: [200, 100, 200, 100, 200, 100, 200],
           tag: 'vibration-sample'
         });
-      });
+      }).catch(function(err){console.log(err)});
     }
+  });
+}
+
+function getNotifications() {
+  navigator.serviceWorker.ready.then(function(registration) {
+    console.log('ready');
+    registration.getNotifications(options).then(function(notifications) {
+      console.log(notifications);
+    })
   });
 }
