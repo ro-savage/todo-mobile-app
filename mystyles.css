@@ -65,8 +65,15 @@ input.new-todo::-webkit-input-placeholder {
     padding-bottom: 0px;
 }
 
+.todo-list li {
+    font-size: 18px;
+}
+.completed .todo-image {
+    font-size: 18px;
+}
+
 .todoapp {
-    margin: 0;
+    margin: 0 5%;
 }
 
 h1 {
