@@ -1,0 +1,52 @@
+.loc {
+    font-size: 16px;
+}
+
+#capturedPhoto {
+    padding:5%;
+    border:2px solid #330000;
+    background-color:#660000;
+    border-radius:10px;
+}
+
+#canvas, #video {
+    max-height: 300px;
+}
+
+#imageSection, #mapSection {
+    text-align: center;
+}
+
+#snap, #savephoto, #findme, #vibrate {
+    outline: black;
+    margin: 5px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.image {
+    text-align: center;
+    margin: auto;
+}
+
+.todo-image {
+    width: 80%
+}
+
+.completed .todo-image {
+    opacity: 0.3;
+}
+
+input.new-todo::-webkit-input-placeholder {
+    color: rgb(255, 192, 76);
+}
+
+.todo-list li .toggle:after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#000000" stroke-width="3"/></svg>');
+}
+
+.todo-list li .destroy {
+    display: block;
+}

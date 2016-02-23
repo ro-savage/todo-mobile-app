@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" data-framework="javascript">
+	<head>
+		<meta charset="utf-8">
+		<title>Todo Offline</title>
+		<link rel="stylesheet" href="node_modules/todomvc-common/base.css">
+		<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
+		<link rel="stylesheet" href="mystyles.css">
+		<script src="js/globals.js"></script>
+	</head>
+	<body>
+		<section class="todoapp">
+			<header class="header">
+				<h1>todos1</h1>
+				<input class="new-todo" placeholder="What needs to be done?" autofocus>
+			</header>
+			<section class="main">
+				<input class="toggle-all" type="checkbox">
+				<label for="toggle-all">Mark all as complete</label>
+				<ul class="todo-list"></ul>
+			</section>
+			<footer class="footer">
+				<span class="todo-count"></span>
+				<ul class="filters">
+					<li>
+						<a href="#/" class="selected">All</a>
+					</li>
+					<li>
+						<a href="#/active">Active</a>
+					</li>
+					<li>
+						<a href="#/completed">Completed</a>
+					</li>
+				</ul>
+				<button class="clear-completed">Clear completed</button>
+			</footer>
+		</section>
+		<!--<br>-->
+		<!--<section>-->
+			<!--<button id="vibrate">Vibrate</button>-->
+			<!--<br><br>-->
+			<!--<button style="background-color:darkgreen; color: white;" onclick="navigator.vibrate([1000, 200, 1000, 2000, 400]);">Vibrate Multiple Times</button>-->
+		<!--</section>-->
+		<section id="imageSection">
+			<video id="video" autoplay></video>
+			<br>
+			<button id="snap">Snap photo</button>
+			<button id="savephoto">Save</button>
+			<input type="file" accept="image/*">
+			<br>
+			<canvas id="canvas" height="0" width="0"></canvas>
+		</section>
+		<section id="mapSection">
+			<div id="out">Loading your location...</div>
+		</section>
+
+		<footer class="info">
+			<p>Double-click to edit a todo</p>
+			<p>Created by <a href="http://twitter.com/oscargodson">Oscar Godson</a></p>
+			<p>Refactored by <a href="https://github.com/cburgmer">Christoph Burgmer</a></p>
+			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+		</footer>
+		<script src="node_modules/todomvc-common/base.js"></script>
+		<script src="js/helpers.js"></script>
+		<script src="js/store.js"></script>
+		<script src="js/model.js"></script>
+		<script src="js/template.js"></script>
+		<script src="js/view.js"></script>
+		<script src="js/controller.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			geoFindMe();
+		</script>
+	<script>
+//		// Check if a new cache is available on page load.
+//		window.addEventListener('load', function(e) {
+//
+//			window.applicationCache.addEventListener('updateready', function(e) {
+//				if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+//					// Browser downloaded a new app cache.
+//					if (confirm('A new version of this site is available. Load it?')) {
+//						window.location.reload();
+//					}
+//				} else {
+//					// Manifest didn't changed. Nothing new to server.
+//				}
+//			}, false);
+//
+//		}, false);
+	</script>
+	</body>
+</html>
