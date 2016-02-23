@@ -68,6 +68,11 @@ input.new-todo::-webkit-input-placeholder {
 .todo-list li {
     font-size: 18px;
 }
+
+..new-todo, .edit {
+    font-size: 18px;
+}
+
 .completed .todo-image {
     font-size: 18px;
 }

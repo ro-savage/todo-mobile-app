@@ -116,19 +116,21 @@ function spawnNotification(theBody,theTitle, theIcon) {
 navigator.serviceWorker.register('service-worker.js');
 
 function showNotification(title, body) {
+  console.log('ran showNotifications');
   Notification.requestPermission(function(result) {
+    console.log('requested permission', result);
     if (result === 'granted') {
-      console.log('notification');
+      console.log('granted notification');
       console.log(navigator.serviceWorker.ready);
       navigator.serviceWorker.ready.then(function(registration) {
-        console.log('notification2');
+        console.log('serviceWorker ready', registration);
         registration.showNotification(title, {
           body: body,
-          icon: '../images/touch/chrome-touch-icon-192x192.png',
-          vibrate: [200, 100, 200, 100, 200, 100, 200],
-          tag: 'vibration-sample'
+          icon: 'icons/android-chrome-192x192.png',
+          vibrate: [200, 100, 200],
+          tag: 'todo app'
         });
-      }).catch(function(err){console.log(err)});
+      })
     }
   });
 }
