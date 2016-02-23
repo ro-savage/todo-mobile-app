@@ -83,6 +83,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
   document.getElementById("savephoto").addEventListener("click", function() {
     global_imagedata = canvas.toDataURL();
+    vibratePhone([1000,1000])
   });
 
 }, false);
@@ -91,27 +92,6 @@ var vibratePhone = function(vibes) {
   console.log("I'm vibing");
   navigator.vibrate(vibes);
 };
-
-//window.addEventListener("DOMContentLoaded", function() {
-//  document.getElementById("vibrate").addEventListener("click", function() {
-//    console.log('clicked vibrate');
-//    navigator.vibrate([3000, 2000, 1000]);
-//  });
-//});
-
-//Notification.requestPermission();
-
-function spawnNotification(theBody,theTitle, theIcon) {
-  var options = {
-    body: theBody
-  };
-
-  if (theIcon) {
-    options.icon = theIcon;
-  }
-
-  var n = new Notification(theTitle,options);
-}
 
 navigator.serviceWorker.register('service-worker.js');
 
