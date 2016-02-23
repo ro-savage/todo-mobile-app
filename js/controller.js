@@ -99,7 +99,7 @@
 			return;
 		}
 
-		vibratePhone([2000,2000,2000]);
+		vibratePhone([2000]);
 		showNotification('Added new todo', title.trim());
 
 		self.model.create(title, function () {
