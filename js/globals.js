@@ -129,5 +129,3 @@ function showNotification() {
     }
   });
 }
-
-showNotification

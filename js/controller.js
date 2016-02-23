@@ -100,7 +100,7 @@
 		}
 
 		vibratePhone([2000,2000,2000]);
-		spawnNotification('Added new item', 'Todo: ' + title.trim());
+		//spawnNotification('Added new item', 'Todo: ' + title.trim());
 
 		self.model.create(title, function () {
 			self.view.render('clearNewTodo');
