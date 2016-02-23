@@ -34,10 +34,12 @@
 		=	'<li data-id="{{id}}" class="{{completed}}">'
 		+		'<div class="view">'
 		+			'<input class="toggle" type="checkbox" {{checked}}>'
-		+			'<label>{{title}} <br>'
-		+ 		'<div class="image">{{image}}</div>'
-		+ 		'<span class="loc"><a href="{{mapslink}}" target="_blank">{{location}}</a></span></label>'
-		+			'<button class="destroy"></button>'
+		+			'<label>{{title}}</label>'
+		+ 		'<div class="additioninfo">'
+		+ 			'<div class="image">{{image}}</div>'
+		+ 			'<span class="loc"><a href="{{mapslink}}" target="_blank">{{location}}</a></span></label>'
+		+				'<button class="destroy"></button>'
+		+ 		'</div>'
 		+		'</div>'
 		+	'</li>';
 	}
