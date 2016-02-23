@@ -69,7 +69,7 @@ input.new-todo::-webkit-input-placeholder {
     font-size: 18px;
 }
 
-..new-todo, .edit {
+.new-todo, .edit {
     font-size: 18px;
 }
 
