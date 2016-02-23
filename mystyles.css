@@ -64,3 +64,22 @@ input.new-todo::-webkit-input-placeholder {
 .todo-list li label  {
     padding-bottom: 0px;
 }
+
+.todoapp {
+    margin: 0;
+}
+
+h1 {
+    width: 100%;
+    font-size: 15vw;
+    line-height: normal;
+    font-weight: 300;
+    text-align: center;
+    color: rgba(175, 47, 47, 0.15);
+    -webkit-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+}
+
+.imageupload {
+    margin-left: 70px;
+}

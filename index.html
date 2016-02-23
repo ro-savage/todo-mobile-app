@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" data-framework="javascript">
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8">
 		<title>Todo Offline</title>
 		<link rel="stylesheet" href="node_modules/todomvc-common/base.css">
@@ -9,9 +10,9 @@
 		<script src="js/globals.js"></script>
 	</head>
 	<body>
+	<h1>Offline Todos</h1>
 		<section class="todoapp">
 			<header class="header">
-				<h1>Offline Todos</h1>
 				<input class="new-todo" placeholder="What needs to be done?" autofocus>
 			</header>
 			<section class="main">
@@ -46,7 +47,7 @@
 			<br>
 			<button id="snap">Snap photo</button>
 			<button id="savephoto">Save</button>
-			<input type="file" accept="image/*">
+			<br><br><input type="file" accept="image/*"  class="imageupload">
 			<br>
 			<canvas id="canvas" height="0" width="0"></canvas>
 		</section>
