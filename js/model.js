@@ -29,8 +29,6 @@
 			imagedata: global_imagedata
 		};
 
-		vibratePhone([2000,2000,2000]);
-
 		this.storage.save(newItem, callback);
 	};
 

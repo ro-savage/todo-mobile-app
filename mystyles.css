@@ -78,13 +78,19 @@ input.new-todo::-webkit-input-placeholder {
 
 h1 {
     width: 100%;
-    font-size: 15vw;
+    font-size: 5vw;
     line-height: normal;
     font-weight: 300;
     text-align: center;
     color: rgba(175, 47, 47, 0.15);
     -webkit-text-rendering: optimizeLegibility;
     text-rendering: optimizeLegibility;
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 12vw;
+    }
 }
 
 .imageupload {
