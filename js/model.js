@@ -29,8 +29,6 @@
 			imagedata: global_imagedata
 		};
 
-		vibratePhone([2000,2000,2000]);
-
 		this.storage.save(newItem, callback);
 	};
 
@@ -73,7 +71,6 @@
 	 * @param {function} callback The callback to fire when the update is complete.
 	 */
 	Model.prototype.update = function (id, data, callback) {
-		vibratePhone([2000,2000,2000]);
 		this.storage.save(data, callback, id);
 	};
 

@@ -99,6 +99,8 @@
 			return;
 		}
 
+		showNotification('Added new todo', title.trim());
+
 		self.model.create(title, function () {
 			self.view.render('clearNewTodo');
 			self._filter(true);

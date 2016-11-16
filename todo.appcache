@@ -1,21 +1,22 @@
 CACHE MANIFEST
-# 2015-02-23:v1
+# 2015-02-25:v1
 
 # Explicitly cached 'master entries'.
 CACHE:
-#./index.html
-#./mystyles.css
-#js/app.js
-#js/controller.js
-#js/globals.js
-#js/helpers.js
-#js/model.js
-#js/store.js
-#js/template.js
-#js/view.js
-#node_modules/todomvc-app-css/index.css
-#node_modules/todomvc-common/base.css
-#node_modules/todomvc-common/base.js
+./index.html
+./mystyles.css
+./service-worker.js
+js/app.js
+js/controller.js
+js/globals.js
+js/helpers.js
+js/model.js
+js/store.js
+js/template.js
+js/view.js
+node_modules/todomvc-app-css/index.css
+node_modules/todomvc-common/base.css
+node_modules/todomvc-common/base.js
 
 # Resources that require the user to be online.
 NETWORK:

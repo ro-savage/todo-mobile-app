@@ -83,6 +83,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
   document.getElementById("savephoto").addEventListener("click", function() {
     global_imagedata = canvas.toDataURL();
+    vibratePhone([1000,1000])
   });
 
 }, false);
@@ -92,23 +93,33 @@ var vibratePhone = function(vibes) {
   navigator.vibrate(vibes);
 };
 
-//window.addEventListener("DOMContentLoaded", function() {
-//  document.getElementById("vibrate").addEventListener("click", function() {
-//    console.log('clicked vibrate');
-//    navigator.vibrate([3000, 2000, 1000]);
-//  });
-//});
+navigator.serviceWorker.register('service-worker.js');
 
-Notification.requestPermission();
+function showNotification(title, body) {
+  console.log('ran showNotifications');
+  Notification.requestPermission(function(result) {
+    console.log('requested permission', result);
+    if (result === 'granted') {
+      console.log('granted notification');
+      console.log(navigator.serviceWorker.ready);
+      navigator.serviceWorker.ready.then(function(registration) {
+        console.log('serviceWorker ready', registration);
+        registration.showNotification(title, {
+          body: body,
+          icon: 'icons/android-chrome-192x192.png',
+          vibrate: [200, 100, 200],
+          tag: 'todo app'
+        });
+      })
+    }
+  });
+}
 
-function spawnNotification(theBody,theTitle, theIcon) {
-  var options = {
-    body: theBody
-  };
-
-  if (theIcon) {
-    options.icon = theIcon;
-  }
-
-  var n = new Notification(theTitle,options);
+function getNotifications() {
+  navigator.serviceWorker.ready.then(function(registration) {
+    console.log('ready');
+    registration.getNotifications(options).then(function(notifications) {
+      console.log(notifications);
+    })
+  });
 }
